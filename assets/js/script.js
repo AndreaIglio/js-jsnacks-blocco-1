@@ -13,12 +13,12 @@ $(function () {
     weight : 10,
   }
 
-  console.log(palla);
+  // console.log(palla);
 
   //JSNACK 1B
   // Attraverso un prompt dare la possibilità all’utente di modificare il peso della palla.
 
-  palla.weight = Number(prompt('Insert your body weight in kg'));
+  palla.weight = Number(prompt('Insert palla weight in kg'));
 
   console.log(palla);
 
@@ -43,7 +43,7 @@ $(function () {
       },
     ];
 
-  console.log(runBike);
+  // console.log(runBike);
 
   // JSNACK 3
 
@@ -186,7 +186,7 @@ $(function () {
 
     };
 
-    console.log(reverseWord('ciao'));
+    // console.log(reverseWord('ciao'));
 
   // JSNACK 3
 
@@ -198,29 +198,100 @@ $(function () {
 
 
 
-// zucchine.forEach(element => {
+  var zucchine = [
+    {
+      variety: "a",
+      weight: 0.1,
+      length: 10,
+    },
+    {
+      variety: "b",
+      weight: 0.2,
+      length: 15,
+    },
+    {
+      variety: "c",
+      weight: 0.3,
+      length: 16,
+    },
+    {
+      variety: "d",
+      weight: 0.7,
+      length: 18,
+    },
+    {
+      variety: "e",
+      weight: 0.8,
+      length: 19,
+    },
+    {
+      variety: "f",
+      weight: 0.9,
+      length: 21,
+    },
+    {
+      variety: "g",
+      weight: 1.1,
+      length: 34,
+    },
+    {
+      variety: "h",
+      weight: 0.4,
+      length: 4,
+    },
+    {
+      variety: "i",
+      weight: 0.5,
+      length: 14,
+    },
+    {
+      variety: "l",
+      weight: 0.6,
+      length: 8,
+    },
+  ];
+
+
+ var zucchineSmallList = [];
+ var zucchineBigList = [];
+
+zucchine.forEach(element => {
   
-//   zucchineLength = element.length;
-//   console.log(zucchineLength);
+  zucchineLength = element.length;
 
-//   var zucchineSmallList = [];
-//   var zucchineBigList = [];
+  if (zucchineLength < 15){
+    zucchineSmallList.push(element);
+  }
+else {
+  zucchineBigList.push(element);
+}
 
-//   if(zucchineLength < 15){
+  console.log(zucchineSmallList);
+  console.log(zucchineBigList);
 
-//     zucchineSmallList.push(element);
-    
-//   }
-// else {
-//   zucchineBigList.push(element);
-// }
+});
 
-//   console.log(zucchineSmallList);
-// });
+var sommaZucchineSmall = 0;
+
+zucchineSmallList.forEach(element => {
+  sommaZucchineSmall += element.weight;
+});
+
+console.log(sommaZucchineSmall);
+
+var sommaZucchineBig = 0;
+
+zucchineBigList.forEach((element) => {
+  sommaZucchineBig += element.weight;
+});
+
+console.log(sommaZucchineBig);
 
 
 
-//   // JSNACK 4
+
+
+  // JSNACK 4
   // Scrivi una funzione che fonda due array (con lo stesso
   // numero di elementi) prendendo alternativamente gli
   // elementi da uno e dall’altro
