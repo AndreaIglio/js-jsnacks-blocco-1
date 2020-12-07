@@ -18,7 +18,7 @@ $(function () {
   //JSNACK 1B
   // Attraverso un prompt dare la possibilità all’utente di modificare il peso della palla.
 
-  palla.weight = Number(prompt('Insert palla weight in kg'));
+  // palla.weight = Number(prompt('Insert palla weight in kg'));
 
   console.log(palla);
 
@@ -162,18 +162,15 @@ $(function () {
 
   // Calcola quanto pesano tutte le zucchine.
 
-  var zucchineWeight = [];
-
   var sum = 0;
 
   zucchine.forEach((element) => {
     console.log(element.weight);
-    zucchineWeight.push(element.weight);
 
     sum += element.weight;
   });
 
-  console.log(zucchineWeight);
+  console.log(sum);
 
   console.log('Il peso totale delle zucchine e\' di: ' + sum + ' kg');
 
@@ -186,7 +183,7 @@ $(function () {
 
     };
 
-    // console.log(reverseWord('ciao'));
+    console.log(reverseWord('ciao'));
 
   // JSNACK 3
 
@@ -259,15 +256,15 @@ zucchine.forEach(element => {
   
   zucchineLength = element.length;
 
-  if (zucchineLength < 15){
+if (zucchineLength < 15){
     zucchineSmallList.push(element);
   }
 else {
   zucchineBigList.push(element);
 }
 
-  console.log(zucchineSmallList);
-  console.log(zucchineBigList);
+  // console.log(zucchineSmallList);
+  // console.log(zucchineBigList);
 
 });
 
@@ -291,11 +288,32 @@ console.log(sommaZucchineBig);
 
 
 
-  // JSNACK 4
-  // Scrivi una funzione che fonda due array (con lo stesso
-  // numero di elementi) prendendo alternativamente gli
-  // elementi da uno e dall’altro
-  // es. [a,b,c], [1,2,3] → [a,1,b,2,c,3].
+// JSNACK 4
+// Scrivi una funzione che fonda due array (con lo stesso
+// numero di elementi) prendendo alternativamente gli
+// elementi da uno e dall’altro
+// es. [a,b,c], [1,2,3] → [a,1,b,2,c,3].
+
+var a = ['1','5'];
+var b = ['c', 'f'];
+var c= [];
+// function arrayFusion(array1,array2,){
+// }
+// console.log(arrayFusion(a,b));
+
+function arrayFusion(array1,array2) {
+
+  var arrayMixValues = [];
+
+  for (var i = 0; i < array1.length; i++){
+    for(var i = 0; i < array2.length; i++){
+      arrayMixValues.push(array1[i],array2[i]); 
+    }
+  }
+    return arrayMixValues;
+  }
+
+  console.log(arrayFusion(a,b));
 
   // JSNACK 5
   // Scrivi una funzione che accetti tre argomenti:
@@ -303,4 +321,13 @@ console.log(sommaZucchineBig);
   // massimo quanto il numero di elementi dell’array).
   // La funzione ritornerà un nuovo array con i valori che
   // hanno la posizione compresa tra “a” e “b”
+
+
+
+
+
+
+
+
 });
+
