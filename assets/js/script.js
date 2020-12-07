@@ -13,12 +13,12 @@ $(function () {
     weight : 10,
   }
 
-  // console.log(palla);
+  console.log(palla);
 
   //JSNACK 1B
   // Attraverso un prompt dare la possibilità all’utente di modificare il peso della palla.
 
-  // palla.weight = Number(prompt('Insert palla weight in kg'));
+  palla.weight = Number(prompt('Insert palla weight in kg'));
 
   console.log(palla);
 
@@ -42,6 +42,21 @@ $(function () {
         peso: 4,
       },
     ];
+
+
+    var weightBike = [];
+
+    runBike.forEach(element => {
+      console.log(element.peso);
+      weightBike.push(element.peso);
+    });
+
+    console.log(weightBike);
+    weightBike.sort(function (a,b) {
+      return a - b;
+    })
+
+    console.log(weightBike[0]);
 
   // console.log(runBike);
 
@@ -296,7 +311,6 @@ console.log(sommaZucchineBig);
 
 var a = ['1','5'];
 var b = ['c', 'f'];
-var c= [];
 // function arrayFusion(array1,array2,){
 // }
 // console.log(arrayFusion(a,b));
@@ -326,17 +340,19 @@ function arrayFusion(array1,array2) {
   //   return Math.floor(Math.random() * (max - min)) + min;
   // };
 
-var x = ['a','2','c','4','5'];
+var x = ['a','2','c','4','d'];
+var g = 3;
+var d = 5;
 
 function birillo(array,a,b){
   arrayWithinElements = [];
 
-  function getRndInteger(min, max) {
-    return Math.floor(Math.random() * (max - min)) + min;
-  }
+  // function getRndInteger(min, max) {
+  //   return Math.floor(Math.random() * (max - min)) + min;
+  // }
 
-var b = getRndInteger(0, array.length + 1);
-var a = getRndInteger(0, b);
+// var b = getRndInteger(0, array.length + 1);
+// var a = getRndInteger(0, b);
 
 for ( var i = a; i < b ; i++){
   arrayWithinElements.push(array[i]);
@@ -346,8 +362,7 @@ return arrayWithinElements;
 
 }
 
-console.log(birillo(x,a,b));
-
+console.log(birillo(x,g,d));
 
 
 });
