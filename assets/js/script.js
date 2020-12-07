@@ -322,10 +322,31 @@ function arrayFusion(array1,array2) {
   // La funzione ritornerà un nuovo array con i valori che
   // hanno la posizione compresa tra “a” e “b”
 
+  // function getRndInteger(min, max) {
+  //   return Math.floor(Math.random() * (max - min)) + min;
+  // };
 
+var x = ['a','2','c','4','5'];
 
+function birillo(array,a,b){
+  arrayWithinElements = [];
 
+  function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+  }
 
+var b = getRndInteger(0, array.length + 1);
+var a = getRndInteger(0, b);
+
+for ( var i = a; i < b ; i++){
+  arrayWithinElements.push(array[i]);
+}
+
+return arrayWithinElements;
+
+}
+
+console.log(birillo(x,a,b));
 
 
 
