@@ -341,7 +341,7 @@ function arrayFusion(array1,array2) {
   // };
 
 var x = ['a','2','c','4','d'];
-var g = 3;
+var g = 2;
 var d = 5;
 
 function birillo(array,a,b){
@@ -354,7 +354,7 @@ function birillo(array,a,b){
 // var b = getRndInteger(0, array.length + 1);
 // var a = getRndInteger(0, b);
 
-for ( var i = a; i < b ; i++){
+for ( var i = a; i < b - 1 ; i++){
   arrayWithinElements.push(array[i]);
 }
 
